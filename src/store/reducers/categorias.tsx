@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import automotivoThumb from '../../assets/categorias/thumbnail/automotivo.png';
 import eletronicosThumb from '../../assets/categorias/thumbnail/eletronicos.png';
 import escritorioThumb from '../../assets/categorias/thumbnail/escritorio.png';
@@ -17,7 +17,6 @@ interface categoriasProps {
     id: string,
     descricao: string,
 }
-
 
 const INITIAL_STATE: categoriasProps[] = [{
     nome: 'Eletrônicos',
@@ -51,6 +50,7 @@ const INITIAL_STATE: categoriasProps[] = [{
     descricao: 'Curta suas músicas e seus filmes com a melhor qualidade!'
   }];
 
+  
 const sliceCategorias = createSlice({
     name: 'categorias',
     initialState: INITIAL_STATE,
