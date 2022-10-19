@@ -1,8 +1,9 @@
 import styles from './Navbar.module.scss';
-import logoImg from '../../assets/logo.svg';
 import classNames from 'classnames';
 import { ShoppingCart } from 'phosphor-react';
 import Busca from '../Busca'
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Logo from '../Logo';
 
 
 const iconProps = {
@@ -12,16 +13,20 @@ const iconProps = {
 }
 
 function Navbar(){
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
     return (
         <nav className={styles.nav}>
-            <img src={logoImg} alt="" className={styles.logo} />
+            <Logo className={styles.logo} onClick={() => {navigate('/')}}/>
             <div className={styles.link}>
                 <div>
-                    <a href="/" className={classNames(styles.link,{
-                        [styles.selected]: window.location.pathname === '/'
+                    <Link to="/" className={classNames(styles.link,{
+                        [styles.selected]: location.pathname === '/'
                     })}>
                         Página Inicial
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -30,13 +35,12 @@ function Navbar(){
             </div>
             
             <div className={styles.icons}>
-                <a href="/cart">
-                    {window.location.pathname === '/cart'
-                        ? <ShoppingCart weight='fill' {...iconProps}/> 
-                        : <ShoppingCart {...iconProps}/>
+                <Link to="/cart">
+                    {location.pathname === '/cart'
+                        ? <ShoppingCart weight='fill' {...iconProps}/> : <ShoppingCart {...iconProps}/>
                     }
                     
-                </a>
+                </Link>
             </div>
 
         </nav>

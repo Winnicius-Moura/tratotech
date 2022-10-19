@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import assistenteVirtual from '../../assets/itens/assistente-virtual.png';
 import airpod from '../../assets/itens/airpod.png';
 import assistenteVirtualTela from '../../assets/itens/assistente-virtual-tela.png';
@@ -30,7 +30,7 @@ interface itensProps {
     titulo: string,
     descricao:string,
     foto:any,
-    favorito: false,
+    favorito: boolean,
     id: number,
     categoria: string,
     preco: number | string,
@@ -244,12 +244,17 @@ const sliceItens = createSlice({
     name: 'itens',
     initialState: INITIAL_STATE,
     reducers:{
-        addItens(state){
-            return [...state]
-        }
+      mudarFavorito:(state, {payload}) => {
+        state = state.map(item => {
+            if(item.id === payload)
+            item.favorito = !item.favorito;
+            return item;
+        })
+      }
     }
 });
 
+export const { mudarFavorito } = sliceItens.actions;
 
 export default sliceItens.reducer;
 
