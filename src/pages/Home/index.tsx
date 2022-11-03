@@ -16,7 +16,7 @@ function Home() {
         <div>
             <Header
              titulo='Classificados Tech'
-             descricao='COMPRE diversos tipos de produtos no melhor site do Brasil'
+             descricao='COMMIT COMPRE diversos tipos de produtos no melhor site do Brasil'
              className={styles.header}
              image={relogio}
             />
