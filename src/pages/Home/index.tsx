@@ -15,7 +15,7 @@ function Home() {
     return(
         <div>
             <Header
-             titulo='Classificados Tech'
+             title='Classificados Tech'
              descricao='COMPRE diversos tipos de produtos no melhor site do Brasil'
              className={styles.header}
              image={relogio}

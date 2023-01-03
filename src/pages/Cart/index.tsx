@@ -5,7 +5,7 @@ function Cart(){
     return (
         <div>
             <Header 
-                titulo='Carrinho de Compras'
+                title='Carrinho de Compras'
                 descricao='Confira produtos que você adicionou ao carrinho.'
             />
             <div className={styles.cart}>

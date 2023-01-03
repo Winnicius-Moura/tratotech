@@ -1,14 +1,14 @@
 import styles from './Header.module.scss';
 
 type HeaderProps = {
-    titulo: string,
+    title: string,
     descricao:string,
     className?: any,
     image?:any,
 }
 
 
-function Header({titulo, descricao, image, className}: HeaderProps){
+function Header({title: titulo, descricao, image, className}: HeaderProps){
     return (
         <header className={`${styles.header}`}>
             <div className={styles['header-texto']}>
