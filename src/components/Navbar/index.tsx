@@ -1,7 +1,7 @@
 import styles from './Navbar.module.scss';
 import classNames from 'classnames';
 import { ShoppingCart } from 'phosphor-react';
-import Busca from '../Busca'
+import { Busca } from '../Busca'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Logo from '../Logo';
 

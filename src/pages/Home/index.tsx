@@ -1,4 +1,4 @@
-import Header from '../../components/Header';
+import { Header } from '../../components/Header';
 import styles from './Home.module.scss';
 import relogio from '../../assets/inicial.png';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { useCategorias } from '../../store/reducers/categorias';
 
 
 
-function Home() {
+export const Home = () => {
 
     const categorias = useSelector(useCategorias);
     const navigate = useNavigate();
@@ -40,5 +40,3 @@ function Home() {
         
     )
 }
-
-export default Home

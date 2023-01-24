@@ -1,7 +1,7 @@
 import Navbar from '../Navbar'
 import styles from './HomePage.module.scss';
 import { Outlet} from 'react-router-dom'
-import Footer from '../Footer';
+import { Footer } from '../Footer';
 
 
 export interface HomePageProps{}

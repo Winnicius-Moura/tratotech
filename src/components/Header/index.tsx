@@ -7,8 +7,7 @@ type HeaderProps = {
     image?:any,
 }
 
-
-function Header({title: titulo, descricao, image, className}: HeaderProps){
+export const Header = ( {title: titulo, descricao, image, className }: HeaderProps ) => {
     return (
         <header className={`${styles.header}`}>
             <div className={styles['header-texto']}>
@@ -21,6 +20,3 @@ function Header({title: titulo, descricao, image, className}: HeaderProps){
         </header>
     )
 }
-
-
-export default Header;

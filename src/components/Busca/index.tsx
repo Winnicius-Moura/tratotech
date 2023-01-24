@@ -1,7 +1,6 @@
 import styles from './Busca.module.scss';
 
-
-function Busca(){
+export const Busca = () => {
     return(
         <div className={styles.busca}>
             <input 
@@ -11,5 +10,3 @@ function Busca(){
         </div>
     )
 }
-
-export default Busca;

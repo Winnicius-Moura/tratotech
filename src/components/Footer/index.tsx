@@ -6,7 +6,7 @@ const iconProps = {
     size: 24,
 }
 
-function Footer(){
+export const Footer = () => {
     return(
         <footer className={styles.footer}>
             <div>
@@ -23,5 +23,3 @@ function Footer(){
         </footer>
     )
 }
-
-export default Footer;
